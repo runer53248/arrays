@@ -73,6 +73,11 @@ public class Main {
 		index = 3;
 		result = ArrayOperations.removeElementAtIndex(array, index);
 		showCase(array, index, result);
+
+		// remove multiple elements
+		array = new String[]{"0", "1", "2", "3"};
+		result = ArrayOperations.removeElements(array, 1, 2);
+		printArray(result);
 	}
 
 	private static void showCase(String[] array, int index, String[]

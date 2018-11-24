@@ -1,9 +1,31 @@
 package pl.sdacademy;
 
+import java.util.Arrays;
+
 /**
  * A simple class to perform utility operations on arrays.
  */
 class ArrayOperations {
+
+	/**
+	 * Remove all elements from array.
+	 *
+	 * @param array
+	 * @param indices
+	 * @return
+	 */
+	static String[] removeElements(String[] array, int... indices) {
+		String[] result = array;
+		Arrays.sort(indices);
+
+		for (int i = indices.length; i > 0; i--) {
+			result = removeElementAtIndex(result,
+				i);
+		}
+
+		return result;
+	}
+
 	/**
 	 * Removes an element from given array and returns a new array
 	 * without this element.
